@@ -1,1 +1,7 @@
 <p>This is where I will add heroes</p>
+<!-- [newHero.persona, newHero.alias, newHero.power_id]) -->
+<input ng-model="ahc.newHero.persona" placeholder="Persona">
+<input ng-model="ahc.newHero.alias" placeholder="Alias">
+<input ng-model="ahc.newHero.power_id" placeholder="Power Id">
+<button ng-click="ahc.spawnNewHero(ahc.newHero)">Spawn New Hero</button>
+{{ahc.newHero}}
