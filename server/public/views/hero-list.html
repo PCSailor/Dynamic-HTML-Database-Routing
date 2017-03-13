@@ -2,7 +2,8 @@
     Each hero in the listing needs to be able to be deleted from the system in the event of their unfortunate demise.</p>
 
 <div ng-repeat="hero in hlc.heroList">
-  {{hero.persona}} | {{hero.alias}} | {{hero.name}}
+  {{hero.persona}} | {{hero.alias}} | {{hero.name}} and id is {{hero.id}}
+  <button ng-click="hlc.obliterateHero(hero.id)">Obliterate</button>
 </div>
 
 <p>hlc.heroList: {{hlc.heroList}}</p>
