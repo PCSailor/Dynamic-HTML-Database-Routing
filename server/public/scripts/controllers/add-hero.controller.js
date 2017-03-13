@@ -1,4 +1,4 @@
-app.controller('AddHeroController', ['$http', function($http){
+app.controller('AddHeroController', ['$http', 'SuperpowerFactory', function($http, SuperpowerFactory){
     console.log('Add Hero Controller loaded');
     var self = this;
     self.testMessage = 'Can you hear me?';
@@ -8,4 +8,6 @@ app.controller('AddHeroController', ['$http', function($http){
         console.log(response);
       });
     }
+
+    self.superpowers = SuperpowerFactory.superpowers;
 }]);

@@ -1,8 +1,9 @@
-app.controller('HeroListController', ['$http', function($http){
+app.controller('HeroListController', ['$http', 'SuperpowerFactory', function($http, SuperpowerFactory){
   console.log('Hero List Controller loaded');
   var self = this;
   self.testVariable = 'I am a test!';
   self.heroList = [];
+  self.superpowers = SuperpowerFactory.superpowers;
 
   getHeroes();
 

@@ -5,7 +5,10 @@
 <div ng-repeat="hero in hlc.heroList">
   <input type="text" ng-model="hero.persona">
   <input type="text" ng-model="hero.alias">
-  <input type="text" ng-model="hero.power_id"> and id is {{hero.id}}
+  <select ng-model="hero.power_id"
+          ng-options="superpower.id as superpower.name for superpower in hlc.superpowers.list">
+  </select>
+   and id is {{hero.id}}
   <button ng-click="hlc.obliterateHero(hero.id)">Obliterate</button>
   <button ng-click="hlc.mutateHero(hero)">Mutate</button>
 </div>
