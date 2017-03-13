@@ -61,7 +61,7 @@ router.put('/:id', function(req, res) {
   pool.connect()
     .then(function (client) {
       client.query('UPDATE heroes SET persona = $1, alias = $2, power_id = $3 WHERE id = $4',
-        [hero.persona, hero.alias, hero.power_id, hero.id])
+        [hero.persona, hero.alias, hero.power_id, heroId])
         .then(function (result) {
           client.release();
           res.sendStatus(200);

@@ -1,9 +1,13 @@
 <p>This should show a list of all heroes in the system, displaying all the information from the entry captured in the view before.
-    Each hero in the listing needs to be able to be deleted from the system in the event of their unfortunate demise.</p>
+  Each hero in the listing needs to be able to be deleted from the system in the event of their unfortunate demise.
+</p>
 
 <div ng-repeat="hero in hlc.heroList">
-  {{hero.persona}} | {{hero.alias}} | {{hero.name}} and id is {{hero.id}}
+  <input type="text" ng-model="hero.persona">
+  <input type="text" ng-model="hero.alias">
+  <input type="text" ng-model="hero.power_id"> and id is {{hero.id}}
   <button ng-click="hlc.obliterateHero(hero.id)">Obliterate</button>
+  <button ng-click="hlc.mutateHero(hero)">Mutate</button>
 </div>
 
 <p>hlc.heroList: {{hlc.heroList}}</p>

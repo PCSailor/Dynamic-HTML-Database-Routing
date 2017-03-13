@@ -18,4 +18,10 @@ app.controller('HeroListController', ['$http', function($http){
       getHeroes();
     });
   }
+
+  self.mutateHero = function(hero) {
+    $http.put('/heroes/' + hero.id, hero).then(function(response){
+      getHeroes();
+    });
+  }
 }]);
