@@ -11,6 +11,7 @@
    and id is {{hero.id}}
   <button ng-click="hlc.obliterateHero(hero.id)">Obliterate</button>
   <button ng-click="hlc.mutateHero(hero)">Mutate</button>
+  <a ng-href="#!hero/{{hero.id}}">Reveal Secret Idenity of {{hero.persona}} // NOTE: #! allows client-side routing, it indicates using client-side routing instead of server-side routing.  If not used, will route directly to server but #! says don't go to the server, stay on the client side for routing.
 </div>
 
 <p>hlc.heroList: {{hlc.heroList}}</p>
